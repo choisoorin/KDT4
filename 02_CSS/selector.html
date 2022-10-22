@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>기본선택자 배우기</title>
+    <style>
+        /* 선택자 우선순위
+           <<<<id선택자 */
+        *{
+            color: blue;
+        }
+        li{
+            background-color: gold;
+        }
+        h3{
+            text-align: center;
+            background-color: grey;
+            color: white;
+            letter-spacing: 10px;
+        }
+        .small{
+            background-color: pink;
+        }
+        .big{
+            background-color: green;
+        }
+        #test{
+            background-color: skyblue;
+        }
+        #rabbit{
+            background-color: brown;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li class="small">쥐</li>
+        <li class="big">소</li>
+        <li class="big">호랑이</li>
+        <li class="small" id="rabbit">토끼</li>
+    </ul>
+    <h3>어흥어흥어흥</h3>
+    <p id="test">p태그</p>
+   
+
+    
+</body>
+</html>

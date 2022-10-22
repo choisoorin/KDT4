@@ -1,0 +1,33 @@
+.square{
+    width: 100px;
+    height: 100px;
+    background-color: skyblue;
+    border: 1px solid black;
+    cursor: pointer;
+    transition: 1s;
+    
+}
+
+.square1:hover{
+    transform: translate(50px) scaleX(2);
+}
+
+.square2:hover{
+    
+    transform: translate(50px) skew(-45deg);
+    
+
+}
+
+.square3:hover{
+    background-color: red;
+    transform: translateX(300px) ;
+    border-radius: 50%;
+   
+}
+
+.square4:hover{
+    
+    background-color: yellow;
+    transform: translateY(25px) scale(1.5) rotateY(360deg);
+}

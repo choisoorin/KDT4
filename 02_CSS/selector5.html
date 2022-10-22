@@ -1,0 +1,41 @@
+*<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    .div2{
+        background-color: pink;
+        font-size: 30px;
+    }
+    .div2::after{
+        content: 'after';
+        color: white;
+    }
+    .div2::before{
+        content: "";
+        background-color: red;
+        display: inline-block;
+        width: 2px;
+        height: 50px;
+    }
+
+    .box:hover::after{
+        content: '빨리';
+    }
+    .box:hover::before{
+        content: "택시";
+    }
+    .box:hover{
+        cursor: pointer;
+    }
+  
+    </style>
+</head>
+<body>
+    <div class="div2">가상요소 선택자</div>
+    <div class="box">여기요!</div>
+</body>
+</html>

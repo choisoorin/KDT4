@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>속성선택자</title>
+    <style>
+        /* 속성만 선택 */
+
+        [disabled]{
+            background-color: red;
+        }
+        [placeholder="이름"]{
+            background-color: orange;
+        }
+        input:not([placeholder]){
+            background-color: blue;
+        }
+
+        /* 속성과 속성 값까지 모두 선택, 속성 값만 선택하는 것은 안됨 */
+
+
+    </style>
+</head>
+<body>
+    <!-- <input type="text" placeholder="text1"/>
+    <input type="text" placeholder="text2"/>
+    <input type="text" placeholder="text3" disabled/>
+    <input type="password" />
+
+    <div class="square"></div>
+    <div class="square"></div>
+    <div class="square"></div>
+    <div class="square"></div> -->
+
+    <input type="text" placeholder="이름" />
+    <input type="password" value="pw" />
+    <input type="text" value="000-0000-0000" />
+    <input type="text" placeholder="핸드폰" />
+    <input type="text" placeholder="주민번호" disabled />
+</body>
+</html>

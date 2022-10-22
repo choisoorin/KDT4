@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>선택자3</title>
+    <style>
+        .div1{
+            background-color: skyblue;
+            width: 100px;
+            height: 100px;
+            line-height: 100px;
+            text-align: center;   
+        }
+        .div1:hover{
+            width: 150px;
+            background-color: orange;
+        }
+        /* active */
+        .div1:active{
+            background-color: aquamarine;
+            height: 150px;
+        }
+        /* focus */
+        input:focus{
+            background-color: purple;
+            color:white;    
+            outline-color: aqua;
+        }
+        /* visited */
+        .links > a:visited{
+            color: chartreuse;
+        }
+
+
+        /* last-child, first-child, nth-child, not */
+        .zoo > * {
+            background-color: green;
+            color: white;
+            font-size: 20px;
+        }
+
+        .zoo li:last-child{
+            background-color: yellow;
+            color: black;
+        }
+        .zoo *:first-child{
+            background-color: pink;
+        }
+
+        .zoo *:nth-child(2){
+            background-color: black;
+            color: white;
+        }
+        /* odd : 홀수번째, even : 짝수번째 */
+        /* .zoo *:nth-child(2n){
+            background-color: aqua;
+            color: white;
+        } */
+        .zoo *:not(div){
+            font-weight: bold;
+            color: red;
+        }
+
+    </style>
+</head>
+<body>
+    <h3>가상 클래스 선택자</h3>
+
+    <!-- hover -->
+    <div class="div1">
+        <span>div1</span>
+    </div>
+    <input type="text"/>
+    <div class="links">
+        <a href="#">네이버로 이동</a>
+        <a href="#">다음으로 이동</a>
+    </div>
+
+    <!-- 
+        E:first-child {} E가 첫번째 요소라면 선택
+        E:last-child {} E가 마지막 요소라면 선택
+        E:nth-child(n) {} E가 n번째 요소라면 선택
+        E:not(xy) {} sy가 아닌 다른요소 선택
+     -->
+    <ul class="zoo">
+        <h2>동물원입니다</h2>
+        <div>판다</div>
+        <li>원숭이</li>
+        <li>토끼</li>
+        <li>사자</li>
+        <li>호랑이</li>
+        <li>코끼리</li>
+        <li>기린</li>
+    </ul>
+</body>
+</html>

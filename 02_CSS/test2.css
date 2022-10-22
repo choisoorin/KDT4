@@ -1,0 +1,32 @@
+
+h2{
+    color: #FFE600;
+}
+.insta{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background : linear-gradient(#FFE600, #FF0080, #DB20DB);
+    position: relative;
+
+}
+.white-box{
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    background-color: white;
+    position: absolute;
+    top: 5px;
+    left: 5px;
+}
+.img-box{
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    background-image: url("./pooh.png");
+    background-size: cover;
+}

@@ -1,0 +1,60 @@
+.box{
+    width: 600px;
+    height: 500px;
+    background-color: gray;
+    position: relative;
+    
+}
+.beach{
+    width: 200px;
+    height: 150px;
+    cursor: pointer;
+    position: absolute;
+    transition: 2s;
+}
+
+.beach1{
+    background-image: url("./beach1.jpg");
+    background-size: cover;
+    top: 200px;
+    left: 150px;
+    transform: skewY(30deg);
+    z-index: 1;
+}
+
+.beach2{
+    background-image: url("./beach2.jpg");
+    background-size: cover;
+    top: 150px;
+    left: 200px;
+    transform: skewY(30deg);
+    z-index: 2;
+}
+
+.beach3{
+    
+    background-image: url("./beach3.jpg");
+    background-size: cover;
+    top: 100px;
+    left: 250px;
+    transform: skewY(30deg);
+    z-index: 3;
+}   
+
+.beach1:hover{
+    z-index: 5;
+    transition: 2s;
+    transform: skewY(0deg);    
+}
+
+.beach2:hover{
+    z-index: 5;
+    transition: 2s;
+    transform: skewY(0deg);    
+}
+
+.beach3:hover{
+    z-index: 5;
+    transition: 2s;
+    transform: skewY(0deg);  
+}

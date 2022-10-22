@@ -1,0 +1,71 @@
+/* .img-box{
+    background-color: aquamarine;
+    width: 400px;
+    height: 250px;
+}
+
+img{
+    border: 1px solid gold;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+
+img:hover{
+    transition: 5s; */
+
+    /* transform: skewX(30deg); */
+    /* transform: skewY(30deg); */
+    /* transform: skew(30deg,30deg); */
+
+    /* transform: scaleX(2); */
+    /* transform: scaleY(0.5); */
+    /* transform: scale(2, 0.5); */
+
+    /* transform: translateX(100px); */
+    /* transform: translateY(100px); */
+    /* transform: translate(100px, 50px); */
+
+    /* border: 1px solid black; */
+
+    /* transform: perspective(500px) rotateX(180deg); */
+    /* backface-visibility: hidden; */
+
+    /* transform: translateX(500px) scaleX(2) skewY(30deg); */
+/* } */
+
+.box{
+    height: 100px;
+    width: 100px;
+    background-color: black;
+    margin-bottom: 30px;
+    cursor: pointer;
+    /* transition: background-color .5s linear; */
+    /* transition-duration: 2s; */
+    /* transition-delay: 2s; */
+    /* transition-property: width; */
+    /* transition-timing-function: ease-in-out; */
+
+    transition: .4s;
+}
+
+/* 속성명 지속시간  */
+.box1:hover{
+    
+    background-color: pink;
+    height: 120px;
+    width: 120px;
+}
+
+.box2:hover{
+    background-color: aqua;
+    transform: translate(200px) scale(2);
+
+}
+
+.box3:hover{
+    display: none;
+
+}
+
+

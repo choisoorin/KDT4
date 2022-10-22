@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>가상클래스선택자 실습</title>
+    <style>
+        /* h1 태그에 마우스가 올라가면=> hover 빨간색 */
+        h1:hover{
+            color: red;
+        }
+
+        /* a 태그를 클릭하고 있으면=>active 배경이 빨간색 */
+        a:active{
+            background-color: blue;
+        }
+        
+        /* input 태그에 포커스가 가면=>focus 배경이 오렌지색 */
+        input:fovus{
+            background-color: orange;
+        }
+    </style>
+</head>
+<body>
+    <h1>태그</h1>
+    <a href="#">태그1</a>
+    <input type="text"/>
+</body>
+</html>
