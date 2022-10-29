@@ -1,12 +1,12 @@
-let con = document.querySelector(".container");
+let li = document.querySelector(".container");
+console.log(li);
+
+li.style.backgroundColor = "#eee";
+li.style.textAlign = "center";
+
+let con = document.querySelectorAll("span");
 console.log(con);
-
-con.style.backgroundColor = "#eee";
-con.style.textAlign = "center";
-
-let p1 = document.querySelectorAll("span");
-console.log(p1);
-for (let li of p1) {
-  p1.style.color = "blueviolet";
-  p1.style.fontWeight = "bold";
+for (let li of con) {
+  li.style.color = "blueviolet";
+  li.style.fontWeight = "bold";
 }

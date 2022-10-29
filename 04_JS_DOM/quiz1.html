@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TodoList올바르게변경</title>
+    <style>
+      .done span {
+        background-color: yellow;
+        font-weight: bolder;
+      }
+      .todo span {
+        color: grey;
+        text-decoration: line-through;
+      }
+      li {
+        margin-top: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>TODO List</h1>
+    <ul class="list">
+      <li class="done"><span>점심먹기</span></li>
+      <li class="done"><span>커피마시기</span></li>
+      <li class="todo"><span>과제 완성하기</span></li>
+      <li class="todo"><span>운동하기</span></li>
+      <li class="todo"><span>저녁먹기</span></li>
+    </ul>
+    <script>
+      const done = document.querySelectorAll(".done span");
+      console.log(done);
+      for (let change of done) {
+        change.style.color = "grey";
+        change.style.fontWeight = "normal";
+        change.style.textDecoration = "line-through";
+        change.style.backgroundColor = "white";
+      }
+
+      const todo = document.querySelectorAll(".todo span");
+      for (let change2 of todo) {
+        change2.style.backgroundColor = "yellow";
+        change2.style.fontWeight = "border";
+        change2.style.textDecoration = "none";
+        change2.style.color = "black";
+      }
+    </script>
+  </body>
+</html>

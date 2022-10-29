@@ -49,12 +49,69 @@ function changeBtnColor() {
 }
 
 // scroll
-console.log(window);
-window.addEventListener("scroll", (event) => {
-  //   console.log(event);
-  //   console.log(event.target);
-  console.log(scrollY);
-  if (scrollY > 300) {
-    document.querySelector(".scroll").style.opacity = "1";
+// console.log(window);
+// window.addEventListener("scroll", (event) => {
+//   //   console.log(event);
+//   //   console.log(event.target);
+//   console.log(scrollY);
+//   if (scrollY > 300) {
+//     document.querySelector(".scroll").style.opacity = "1";
+//   }
+// });
+
+//todo list 부분
+const btn = document.querySelector("button");
+const input = document.querySelector("input");
+
+btn.addEventListener("click", function (e) {
+  console.log(e);
+});
+
+input.addEventListener("keydown", function (e) {
+  //   console.log(e);
+  //   console.log(e.code);
+  //   console.log(e.key);
+
+  if (e.code === "ArrowUp") {
+    console.log("up!!");
+  } else if (e.code === "ArrowRight") {
+    console.log("Right");
+  } else if (e.code === "ArrowLeft") {
+    console.log("Left");
+  } else if (e.code === "ArrowDown") {
+    console.log("Down!!");
+  } else if (e.code === "Enter") {
+    console.log("Enter!!");
+  } else {
+    console.log("others");
   }
+});
+
+const todoForm = document.querySelector("#todo-form");
+const todos = document.querySelector(".todos");
+
+todoForm.addEventListener("submit", function (e) {
+  e.preventDefault(); //콘솔창에 계속 띄워줌
+  console.log("submit");
+  const todoInput = document.querySelector("input[name=todo]");
+
+  console.log(todoInput.value); // value : text 안의 글자 받아와줌
+
+  const todo = todoInput.value;
+  const newTodo = document.createElement("li");
+  newTodo.append(todo);
+  todos.append(newTodo);
+  todoInput.value = ""; // input value값 빈문자, 입력하고 초기화되는것
+});
+
+const changeInput = document.getElementById("change-input");
+changeInput.addEventListener("change", function () {
+  console.log("change?!");
+});
+changeInput.addEventListener("input", function () {
+  console.log("changing~");
+  const div = document.querySelector(".intro");
+  //   console.log(div);
+
+  div.textContent = this.value;
 });
