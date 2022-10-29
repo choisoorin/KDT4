@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>반응형 웹 - media query</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        
+        body{
+            background-color: coral;
+        }
+        body .inner{
+            max-width: 1200px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 0 3rem;
+
+        }
+        @media screen and (max-width : 700px){
+            body{
+                background-color: yellowgreen;
+            }
+            h1{
+                color: red;
+            }
+        }
+        @media screen and (min-width : 300px){
+            h1{
+                color: green;
+            }
+
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="inner">
+            <h1>hello world</h1>
+        </div>
+    </div>
+</body>
+</html>
