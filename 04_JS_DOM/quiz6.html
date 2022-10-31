@@ -5,8 +5,41 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>방명록만들기</title>
+    <style>
+      table {
+        /* width: 100px; */
+        border: 1px solid black;
+      }
+      th,
+      td {
+        border: 1px solid #444444;
+      }
+    </style>
   </head>
   <body>
     <h1>여기는 방명록!!</h1>
+    <form id="write">
+      <label for="">작성자</label>
+      <input type="text" id="writer" />
+      <br />
+      <br />
+      <label for="">내용</label>
+      <input type="text" id="content" style="width: 300px" />
+      <br />
+      <br />
+      <button>등록</button>
+    </form>
+    <br />
+    <table class="table">
+      <thead>
+        <tr>
+          <th>작성자</th>
+          <th>내용</th>
+          <th>작성일</th>
+        </tr>
+      </thead>
+    </table>
+
+    <script></script>
   </body>
 </html>

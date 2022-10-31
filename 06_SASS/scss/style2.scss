@@ -1,0 +1,70 @@
+@import "reset";
+@import "mixin2";
+
+$bodyBgColor: #eee;
+$itemBgColor: #fff;
+$itemHoverBgColor: pink;
+$boxShadow: 5px 5px 20px rgba(0, 0, 0, 0.1);
+$interval: 0.3s;
+
+body {
+  background-color: $bodyBgColor;
+  .wrap {
+    width: 100%;
+    border-bottom: 2px solid rgb(0, 0, 0);
+    padding: 100px;
+    display: flex;
+    justify-content: center;
+    perspective: 600px;
+    &:hover {
+      .item {
+        opacity: 1;
+        transform: translate(0, 0) rotateY(0);
+      }
+    }
+    .item {
+      width: 300px;
+      padding: 30px;
+      margin: 50px;
+      box-shadow: $boxShadow;
+      background-color: $itemBgColor;
+      border-radius: 10px;
+      transition: 0.4s;
+      opacity: 0;
+      transform: translate(0, 100px) rotateY(180deg);
+
+      h2 {
+        font: bold 30px/1.2 "arial";
+        margin-bottom: 20px;
+        @if $itemBgColor==#fff {
+          color: #444;
+        } @else {
+          color: #fff;
+        }
+      }
+      p {
+        font: normal 16px/1.5 "cursive";
+        margin-bottom: 20px;
+        @if $itemBgColor==#fff {
+          color: #444;
+        } @else {
+          color: #fff;
+        }
+      }
+      a {
+        @include button(150px, #222, red);
+      }
+      $bgColors: (orange, hotpink, aqua, lightgreen);
+
+      @each $el in $bgColors {
+        $index: index($bgColors, $el);
+        &:nth-of-type(#{$index}) {
+          transition-delay: $interval * $index;
+          a {
+            @include button($bgColor: $el);
+          }
+        }
+      }
+    }
+  }
+}
